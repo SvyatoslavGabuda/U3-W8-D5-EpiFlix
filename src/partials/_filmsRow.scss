@@ -1,0 +1,33 @@
+.filmsRow {
+  padding: 15px 0px;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-x: scroll;
+  &:hover {
+    .col {
+      z-index: 5;
+    }
+  }
+}
+.col img {
+  transition: transform 0.2s;
+  width: 100%;
+}
+
+.col img:hover {
+  transform: scale(1.1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #282828;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
