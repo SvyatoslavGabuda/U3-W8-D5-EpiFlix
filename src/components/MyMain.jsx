@@ -22,8 +22,12 @@ class MyMain extends Component {
       <>
         <Container fluid className="px-4">
           <NavInMain />
+
+          {/* Mytitle è semplicemente un titolo mentre la FilmRow riceve una props e crea una row contenenti i film trovati */}
           <MyTitle title="Trending Now" />
-          <FilmRow search="harry" />
+          <FilmRow search="wick" />
+
+          {/* Blocco che si occupa della ricerca della ricerca */}
           <MyTitle title="Search:" />
           <Row className="align-items-start">
             <Col xs="8">
@@ -46,11 +50,12 @@ class MyMain extends Component {
                 style={{ backgroundColor: "#221f1f" }}
                 onClick={this.startSearch}
               >
-                Start Searching
+                <i className="fa fa-search icons"></i> Start Searching
               </Button>
             </Col>
           </Row>
           {this.state.searching && <FilmRow search={this.state.newSearch} />}
+          {/* fine blocco ricerca */}
 
           <MyTitle title="Watch It Again" />
           <FilmRow search="jaws" />

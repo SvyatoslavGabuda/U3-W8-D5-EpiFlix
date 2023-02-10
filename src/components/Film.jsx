@@ -43,8 +43,10 @@ class Film extends Component {
   render() {
     return (
       <>
-        <Col xs="12" sm="6" md="3" lg="2" className="col">
+        <Col xs="12" sm="6" md="3" xl="2" className="col">
           <img src={this.props.img} alt={this.props.alt} onClick={this.loadInfo} />
+
+          {/* la parte sottostante si occupa di renderizzare gli errori e i commenti caricicati col click */}
           {this.state.errors && (
             <Alert variant="danger" bg="danger">
               {this.state.errorMessage}

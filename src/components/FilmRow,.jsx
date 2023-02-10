@@ -18,6 +18,7 @@ class FilmRow extends Component {
       if (responde.ok) {
         const films = await responde.json();
         // console.log(films);
+        // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Questo if è serve a prevenire l'errore quando il server si blocca per non dare troppi risultati
         if (films.Response === "True") {
           // console.log("sono la respose di film", films.Response);
           this.setState({ loadedFilm: films.Search, loading: false });

@@ -1,5 +1,5 @@
 .filmsRow {
-  padding: 15px 0px;
+  padding: 20px 0px;
   flex-wrap: nowrap;
   align-items: center;
   overflow-x: scroll;
@@ -10,8 +10,16 @@
   }
 }
 .col img {
+  // la dimensione fissa alle immagine è data per dare uniformita agli elementi
+  // width:100% non è sufficiente in quanto tutte le immagini hanno dimensioni leggermente differenti
   transition: transform 0.2s;
-  width: 100%;
+  width: 200px;
+  height: 320px;
+  overflow-x: hidden;
+  @media screen and (max-width: 850px) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .col img:hover {
