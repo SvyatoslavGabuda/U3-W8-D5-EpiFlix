@@ -44,9 +44,9 @@ class MyMain extends Component {
                 />
               </FloatingLabel>
             </Col>
-            <Col>
+            <Col className="h-100">
               <Button
-                className="btn btn-secondary btn-sm  rounded-0  h-100"
+                className="btn btn-secondary btn-sm  rounded-0 p-3"
                 style={{ backgroundColor: "#221f1f" }}
                 onClick={this.startSearch}
               >

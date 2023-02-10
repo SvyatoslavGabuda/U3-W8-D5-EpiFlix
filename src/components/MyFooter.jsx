@@ -112,14 +112,14 @@ class MyFooter extends Component {
                 </Col>
               </Row>
               <Row>
-                <Col xs="12" className="text-left mb-2">
+                <Col xs="12" className="text-start mb-2">
                   <button type="button" className="btn btn-sm footer-button rounded-0 mt-3">
                     Service Code
                   </button>
                 </Col>
               </Row>
               <Row>
-                <Col xs="12" className="text-left mb-2 mt-2 copyright">
+                <Col xs="12" className="text-start mb-2 mt-2 copyright">
                   © 1997-2022 Netflix, Inc.
                 </Col>
               </Row>
