@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Col, Row, Alert, Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class Film extends Component {
   state = {
@@ -46,18 +47,21 @@ class Film extends Component {
         <Col xs="12" sm="6" md="3" xl="2" className="col">
           <img src={this.props.img} alt={this.props.alt} onClick={this.loadInfo} />
 
-          {/* la parte sottostante si occupa di renderizzare gli errori e i commenti caricicati col click */}
+          {/* la parte sottostante si occupa di renderizzare gli errori e i commenti caricicati col
+          click */}
           {this.state.errors && (
             <Alert variant="danger" bg="danger">
               {this.state.errorMessage}
             </Alert>
           )}
-
           {this.state.clicked && (
             <Row>
               <button className="mt-2 btn btn-secondary btn-sm  rounded-0" onClick={this.load}>
                 Load Info
               </button>
+              <Link to={"/Movies/" + this.props.imdb}>
+                <span className="mt-2 btn btn-secondary btn-sm  rounded-0">Movie Details</span>
+              </Link>
               {this.state.loading && <Spinner animation="border" variant="secondary" />}
               {this.state.loadedInfo && (
                 <div>
@@ -65,14 +69,7 @@ class Film extends Component {
                     <span>Title: </span>
                     {this.state.loadedInfo.Title}
                   </p>
-                  <p>
-                    <span>Actors: </span>
-                    {this.state.loadedInfo.Actors}
-                  </p>
-                  <p>
-                    <span>Awards: </span>
-                    {this.state.loadedInfo.Awards}
-                  </p>
+
                   <p>
                     <span>Year: </span>
                     {this.state.loadedInfo.Year}

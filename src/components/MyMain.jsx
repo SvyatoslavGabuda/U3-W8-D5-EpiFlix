@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container, Form, FloatingLabel, Button, Row, Col } from "react-bootstrap";
 import MyTitle from "./MyTitle";
 import FilmRow from "./FilmRow,";
-import NavInMain from "./NavInMain";
+// import NavInMain from "./NavInMain";
 
 const MyMain = () => {
   // state = {
@@ -24,7 +24,7 @@ const MyMain = () => {
   return (
     <>
       <Container fluid className="px-4">
-        <NavInMain />
+        {/* <NavInMain /> */}
 
         {/* Mytitle è semplicemente un titolo mentre la FilmRow riceve una props e crea una row contenenti i film trovati */}
         <MyTitle title="Trending Now" />
