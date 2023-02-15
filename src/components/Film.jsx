@@ -44,7 +44,7 @@ class Film extends Component {
   render() {
     return (
       <>
-        <Col xs="12" sm="6" md="3" xl="2" className="col">
+        <Col xs="12" sm="6" md="3" xl="2" className="col text-center">
           <img src={this.props.img} alt={this.props.alt} onClick={this.loadInfo} />
 
           {/* la parte sottostante si occupa di renderizzare gli errori e i commenti caricicati col
@@ -60,7 +60,7 @@ class Film extends Component {
                 Load Info
               </button>
               <Link to={"/Movies/" + this.props.imdb}>
-                <span className="mt-2 btn btn-secondary btn-sm  rounded-0">Movie Details</span>
+                <span className="mt-2 btn btn-secondary btn-sm  rounded-0">More Movie Details</span>
               </Link>
               {this.state.loading && <Spinner animation="border" variant="secondary" />}
               {this.state.loadedInfo && (
@@ -74,13 +74,6 @@ class Film extends Component {
                     <span>Year: </span>
                     {this.state.loadedInfo.Year}
                   </p>
-                  <p>Ratings:</p>
-                  {this.state.loadedInfo.Ratings.map((el, i) => (
-                    <p key={i}>
-                      <span>{el.Source} </span>
-                      {el.Value}
-                    </p>
-                  ))}
                 </div>
               )}
             </Row>

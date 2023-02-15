@@ -8,7 +8,6 @@ import MyNav from "./components/MyNav";
 import TVShows from "./components/TVShows";
 import NavInMain from "./components/NavInMain";
 
-import { Container } from "react-bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MovieDetails from "./components/MovieDetails";
 import CoomingSoon from "./components/CoomingSoon";
@@ -17,9 +16,7 @@ function App() {
     <>
       <BrowserRouter>
         <MyNav />
-        <Container fluid className="px-4">
-          <NavInMain />
-        </Container>
+        <NavInMain />
         <Routes>
           <Route path="/" element={<MyMain />} />
           <Route path="/TVShows" element={<TVShows />} />

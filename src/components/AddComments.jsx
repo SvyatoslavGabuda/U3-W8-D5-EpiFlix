@@ -54,7 +54,7 @@ const AddComments = (props) => {
               }}
             />
           </FloatingLabel>
-          <Button variant="info" type="submit" className="d-block mx-auto">
+          <Button variant="secondary" type="submit" className="d-block mx-auto">
             Submit
           </Button>
         </Form>
